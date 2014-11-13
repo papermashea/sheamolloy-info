@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Shea Molloy</title>
+
+<style type="text/css">
+    .more {
+        padding: 20px;
+        display: none;
+        margin-top: 20px;
+        border: 1px solid #000;
+    }
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("select").change(function(){
+            $( "select option:selected").each(function(){
+                if($(this).attr("value")=="read"){
+                  $(".more").hide();
+                  $(".read").show();
+                }
+                if($(this).attr("value")=="design"){
+                    $(".more").hide();
+                    $(".design").show();
+                }
+                if($(this).attr("value")=="develop"){
+                    $(".more").hide();
+                    $(".develop").show();
+                }
+                if($(this).attr("value")=="make"){
+                  $(".more").hide();
+                  $(".make").show();
+                }
+                if($(this).attr("value")=="learn"){
+                    $(".more").hide();
+                    $(".learn").show();
+                }
+                if($(this).attr("value")=="run"){
+                    $(".more").hide();
+                    $(".run").show();
+                }
+            });
+        }).change();
+    });
+</script>
+</head>
+<body>
+    <div>
+        <h4 >My name is Shea and I like to
+             <select>
+                <option>...</option>
+                  <option value="read">read</option>
+                  <option value="design">design</option>
+                  <option value="develop">develop</option>
+                  <option value="make">make</option>
+                  <option value="learn">learn</option>
+                  <option value="run">run</option>
+            </select>
+        </h4>
+    </div>
+    <div class="read more">
+        <p>science fiction, indie comics, and mysteries.</p>
+    </div>
+    <div class="design more">
+        <p>websites, applications and printed matter.</p>
+    </div>
+    <div class="develop more">
+        <p>interfaces, user experiences and interactive information.</p>
+    </div>
+    <div class="learn more">
+        <p>about technology, art, people and plants.</p>
+    </div>
+    <div class="make more">
+        <p>up new recipes, homemade cosmetics and other pretty, useful things.</p>
+    </div>
+    <div class="run more">
+        <p>trails, dance parties and projects for good causes.</p>
+    </div>
+</body>
+</html>      
